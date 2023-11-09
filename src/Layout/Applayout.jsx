@@ -1,12 +1,19 @@
 /* eslint-disable react/prop-types */
-
+import "./Applayout.css";
 import Sidebar from "../Components/Sidebar/Sidebar";
+import Signup from "../Components/Sidebar/Signup";
+
 function Applayout({ children }) {
   return (
-    <div className="flex gap-2">
-      <Sidebar />
+    <div className="theme">
+      <div>
+        <Sidebar />
+      </div>
 
-      <div className="w-3/4 border-s-white border">{children}</div>
+      <div>{children}</div>
+      <div>
+        <Signup />
+      </div>
     </div>
   );
 }

@@ -7,3 +7,11 @@ body {
   color: white;
   scroll-behavior: smooth;
 }
+:root {
+  --secondary_bg: #121212;
+  --tertiary_bg: #242424;
+  --card_bg: #303030;
+}
+.scrollbar::-webkit-scrollbar {
+  width: 0;
+}

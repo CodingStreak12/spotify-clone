@@ -5,8 +5,8 @@ export default {
     extend: {
       colors: {
         secondary: "#121212",
-        tertiary: "#242424",
-        danger: "#FF69B4",
+        tertiary: "#1e1e1e",
+        card: "#181818",
       },
     },
   },
