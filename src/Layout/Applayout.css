@@ -1,3 +1,11 @@
 .theme {
+  height: 100vh;
   display: grid;
+  overflow: hidden;
+  column-gap: 1.2rem;
+  grid-template-columns: 25% 1fr;
+  grid-template-rows: calc(100vh - 60px) 1fr;
+}
+.grid-col-span-2 {
+  grid-column: span 2;
 }

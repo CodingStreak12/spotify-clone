@@ -1,7 +1,7 @@
 function Signup() {
   return (
-    <div className="bg-gradient-to-r from-[#af2896] to-[#509bf5] flex justify-between py-1.5 px-4 z-10">
-      <div className="">
+    <div className="bg-gradient-to-r from-[#af2896] to-[#509bf5] flex justify-between py-1.5 px-4 z-10 h-full">
+      <div>
         <p className="uppercase text-sm mb-1">preview of spotify</p>
         <p className="text-sm">
           Sign up get unlimited songs and podcasts with occasional ads. No

@@ -2,11 +2,11 @@ import { BsSpotify, BsSearch } from "react-icons/bs";
 import { AiFillHome, AiOutlinePlus } from "react-icons/ai";
 import { BiLibrary } from "react-icons/bi";
 import { FiGlobe } from "react-icons/fi";
-import Signup from "./Signup";
+
 function Sidebar() {
   return (
     //Complete sidebar div
-    <div className="w-1/4">
+    <div>
       {/* Wrapper for the sidebar nav */}
       <nav className="px-2 py-1">
         {/* First part of the side bar logo home search etc */}

@@ -6,12 +6,12 @@ import Signup from "../Components/Sidebar/Signup";
 function Applayout({ children }) {
   return (
     <div className="theme">
-      <div>
+      <div className="">
         <Sidebar />
       </div>
 
-      <div>{children}</div>
-      <div>
+      <div className=" overflow-auto">{children}</div>
+      <div className="grid-col-span-2">
         <Signup />
       </div>
     </div>
