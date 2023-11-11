@@ -1,0 +1,7 @@
+.play-btn {
+  display: none !important;
+}
+
+.card:hover .play-btn {
+  display: flex !important;
+}

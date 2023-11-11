@@ -1,9 +1,15 @@
+import { BsPlayFill } from "react-icons/bs";
+import "./Card.css";
+import { Link } from "react-router-dom";
+
 function Card() {
   return (
-    <div className="bg-card p-4 rounded-md cursor-pointer">
-      <div className="">
-        <img src="/assets/drake.jpg" className=" rounded-lg" />
-        {/* Button for play */}
+    <div className="bg-card p-4 rounded-md cursor-pointer hover:bg-[#282828] transition-all card">
+      <div className="relative">
+        <img src="/assets/drake.jpg" className=" rounded-lg h-full w-full" />
+        <Link className="absolute text-4xl bg-green-500 text-black rounded-full w-14 h-14 flex justify-center items-center right-2 bottom-2 play-btn">
+          <BsPlayFill />
+        </Link>
       </div>
 
       <div className="mt-4">

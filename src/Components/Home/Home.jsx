@@ -1,6 +1,7 @@
 import Applayout from "../../Layout/Applayout";
 import { BsChevronLeft, BsChevronRight } from "react-icons/bs";
 import Card from "../Card/Card";
+import { Link } from "react-router-dom";
 function Home() {
   return (
     <Applayout>
@@ -14,13 +15,13 @@ function Home() {
           </div>
 
           <div className="flex gap-6 items-center">
-            <button className=" bg-transparent text-gray-400 opacity-60 font-bold py-2 px-5 rounded-full">
+            <Link className=" bg-transparent text-gray-400 opacity-60 font-bold py-2 px-5 rounded-full">
               Sign up
-            </button>
+            </Link>
 
-            <button className="bg-white text-black font-bold py-3 px-8 rounded-full">
+            <Link className="bg-white text-black font-bold py-3 px-8 rounded-full">
               Log in
-            </button>
+            </Link>
           </div>
         </div>
 
@@ -31,7 +32,7 @@ function Home() {
               <h2 className="text-xl font-bold opacity-80">
                 Spotify Playlists
               </h2>
-              <button className="opacity-80">Show all</button>
+              <Link className="opacity-80">Show all</Link>
             </div>
             {/* Spotify Playlists */}
             <div className="grid grid-cols-5 gap-8 mt-5 px-8">
@@ -47,7 +48,7 @@ function Home() {
               <h2 className="text-xl font-bold opacity-80">
                 Great first audiobooks
               </h2>
-              <button className="opacity-80">Show all</button>
+              <Link className="opacity-80">Show all</Link>
             </div>
 
             <div className="grid grid-cols-5 gap-8 mt-5 px-8">
@@ -63,7 +64,7 @@ function Home() {
               <h2 className="text-xl font-bold opacity-80">
                 Great first audiobooks
               </h2>
-              <button className="opacity-80">Show all</button>
+              <Link className="opacity-80">Show all</Link>
             </div>
 
             <div className="grid grid-cols-5 gap-8 mt-5 px-8">
