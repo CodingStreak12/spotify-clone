@@ -15,11 +15,17 @@ function Home() {
           </div>
 
           <div className="flex gap-6 items-center">
-            <Link className=" bg-transparent text-gray-400 opacity-60 font-bold py-2 px-5 rounded-full">
+            <Link
+              to="signup"
+              className=" bg-transparent text-gray-400 opacity-60 font-bold py-2 px-5 rounded-full"
+            >
               Sign up
             </Link>
 
-            <Link className="bg-white text-black font-bold py-3 px-8 rounded-full">
+            <Link
+              to="/login"
+              className="bg-white text-black font-bold py-3 px-8 rounded-full"
+            >
               Log in
             </Link>
           </div>

@@ -2,6 +2,7 @@ import { BsSpotify, BsSearch } from "react-icons/bs";
 import { AiFillHome, AiOutlinePlus } from "react-icons/ai";
 import { BiLibrary } from "react-icons/bi";
 import { FiGlobe } from "react-icons/fi";
+import { Link } from "react-router-dom";
 
 function Sidebar() {
   return (
@@ -47,9 +48,9 @@ function Sidebar() {
               <p className="font-semibold opacity-90 mb-7">
                 It&apos;s easy, we&apos;ll help you
               </p>
-              <button className="bg-white text-black font-bold py-2 px-5 rounded-full">
+              <Link className="bg-white text-black font-bold py-2 px-5 rounded-full">
                 Create playlist
-              </button>
+              </Link>
             </div>
 
             <div className=" bg-tertiary rounded-lg py-5 px-4 ">
@@ -59,9 +60,9 @@ function Sidebar() {
               <p className="font-semibold opacity-90 mb-7">
                 We&apos;ll keep you updated on new episodes
               </p>
-              <button className="bg-white text-black font-bold py-2 px-5 rounded-full">
+              <Link className="bg-white text-black font-bold py-2 px-5 rounded-full">
                 Browse podcasts
-              </button>
+              </Link>
             </div>
 
             {/* This is legal links */}
