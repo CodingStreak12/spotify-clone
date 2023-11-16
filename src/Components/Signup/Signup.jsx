@@ -20,7 +20,7 @@ function Signup() {
     <div className="">
       {/* This is the whole signup box */}
 
-      <div className="mx-auto w-1/2 flex flex-col items-center pt-12 gap-10">
+      <div className="mx-auto w-1/2 flex flex-col items-center pt-12 pb-8 gap-10">
         <Link to="/" className="flex items-center gap-4">
           <BsSpotify className="text-4xl" />
 
@@ -64,16 +64,20 @@ function Signup() {
             <span>This appears on your profile.</span>
           </div>
 
-          <div className="">
+          <div className="w-full">
             <label>What&apos;s your date of birth?</label>
-            <div className="flex gap-2">
-              <div className="">
+            <div className="flex gap-3 w-full">
+              <div className="flex-1 flex flex-col gap-4 mt-4">
                 <label>Day</label>
-                <input type="number" placeholder="DD" />
+                <input
+                  type="number"
+                  placeholder="DD"
+                  className="w-full bg-[#2a2a2a] placeholder:text-white placeholder:opacity-80 text-lg py-2 px-3 rounded-md ring-2 ring-[#414141] hover:ring-white focus:ring-4"
+                />
               </div>
-              <div>
+              <div className="flex-[2] flex flex-col gap-4 mt-4">
                 <label>Month</label>
-                <select>
+                <select className=" w-full bg-[#2a2a2a] placeholder:text-white placeholder:opacity-80 text-lg py-2 px-3 rounded-md ring-2 ring-[#414141] hover:ring-white focus:ring-4">
                   {months.map((month) => (
                     <option value={month} key={month}>
                       {month}
@@ -81,40 +85,51 @@ function Signup() {
                   ))}
                 </select>
               </div>
-              <div>
+              <div className="flex-1 flex flex-col gap-4 mt-4">
                 <label>Year</label>
-                <input type="number" placeholder="YYYY" />
+                <input
+                  type="number"
+                  placeholder="YYYY"
+                  className="w-full bg-[#2a2a2a] placeholder:text-white placeholder:opacity-80 text-lg py-2 px-3 rounded-md ring-2 ring-[#414141] hover:ring-white focus:ring-4"
+                />
               </div>
             </div>
           </div>
 
-          <div>
+          <div className="">
             <label>What&apos;s your gender</label>
-            <div>
-              <input type="radio" />
-              <label>Male</label>
-            </div>
+            <div className="flex gap-6 mt-3">
+              <div className="flex gap-2 items-center">
+                <input type="radio" name="gender" value="male" />
+                <label>Male</label>
+              </div>
 
-            <div className="flex flex-col gap-3">
-              <input type="radio" />
-              <label>Female</label>
-            </div>
-            <div className="flex flex-col gap-3">
-              <input type="radio" />
-              <label>Prefer not to say</label>
+              <div className="flex gap-2 items-center">
+                <input type="radio" name="gender" value="female" />
+                <label>Female</label>
+              </div>
+              <div className="flex gap-2">
+                <input type="radio" name="gender" value="na" />
+                <label>Prefer not to say</label>
+              </div>
             </div>
           </div>
 
-          <span>
+          <span className="text-xs mt-7">
             By clicking on sign up, you agree to Spotify&apos;s Terms and
             Conditions of Use
           </span>
-          <span>
+          <span className="text-xs">
             To learn more about how Spotify collects, uses, shares and protects
             your personal data, please see Spotify&apos;s Privacy Policy.
           </span>
 
-          <button type="submit">Sign up</button>
+          <button
+            type="submit"
+            className="mx-auto my-4 w-1/2 text-lg font-bold py-3 bg-[#1ed760] text-black  rounded-full hover:scale-x-105 hover:bg-[#1ef067]"
+          >
+            Sign up
+          </button>
         </form>
       </div>
     </div>

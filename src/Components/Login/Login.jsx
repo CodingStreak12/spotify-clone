@@ -49,7 +49,7 @@ function Login() {
 
         <span>
           <span className="opacity-70">Don&apos;t have an account? </span>
-          <Link to="signup" className="underline font-semibold">
+          <Link to="/signup" className="underline font-semibold">
             Sign up for Spotify
           </Link>
         </span>
