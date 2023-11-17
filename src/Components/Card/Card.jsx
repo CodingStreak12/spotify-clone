@@ -1,22 +1,46 @@
-import { BsPlayFill } from "react-icons/bs";
+import { BsPauseFill, BsPlayFill } from "react-icons/bs";
 import "./Card.css";
-import { Link } from "react-router-dom";
+import { useDispatch, useSelector } from "react-redux";
+import { pauseSong, playSong } from "../../States/SongSlice";
+function Card({ song }) {
+  const dispatch = useDispatch();
+  const { playingSong, isPlaying } = useSelector((store) => store.songs);
 
-function Card() {
+  function handlePlay(song) {
+    dispatch(playSong(song));
+  }
+  function handlePause(song) {
+    dispatch(pauseSong(song));
+  }
+
   return (
     <div className="bg-card p-4 rounded-md cursor-pointer hover:bg-[#282828] transition-all card">
-      <div className="relative">
-        <img src="/assets/drake.jpg" className=" rounded-lg h-full w-full" />
-        <Link className="absolute text-4xl bg-green-500 text-black rounded-full w-14 h-14 flex justify-center items-center right-2 bottom-2 play-btn">
-          <BsPlayFill />
-        </Link>
+      <div className="relative h-48">
+        <img
+          src={song?.image}
+          className=" rounded-lg h-full w-full object-fill object-center"
+        />
+
+        {isPlaying && playingSong.id === song.id ? (
+          <button
+            className="absolute text-4xl bg-green-500 text-black rounded-full w-14 h-14 flex justify-center items-center right-2 bottom-2 play-btn"
+            onClick={() => handlePause(song)}
+          >
+            <BsPauseFill />
+          </button>
+        ) : (
+          <button
+            className="absolute text-4xl bg-green-500 text-black rounded-full w-14 h-14 flex justify-center items-center right-2 bottom-2 play-btn"
+            onClick={() => handlePlay(song)}
+          >
+            <BsPlayFill />
+          </button>
+        )}
       </div>
 
       <div className="mt-4">
-        <p className="font-bold opacity-90">RapCaviar</p>
-        <p className="mt-2 opacity-40">
-          New music from Turbo and Gunna, NAV and...
-        </p>
+        <p className="font-bold opacity-90">{song?.title}</p>
+        <p className="mt-2 opacity-40">{song?.artist}</p>
       </div>
     </div>
   );

@@ -2,6 +2,8 @@ import Applayout from "../../Layout/Applayout";
 import { BsChevronLeft, BsChevronRight } from "react-icons/bs";
 import Card from "../Card/Card";
 import { Link } from "react-router-dom";
+import songs from "../../data/Data";
+
 function Home() {
   return (
     <Applayout>
@@ -42,43 +44,9 @@ function Home() {
             </div>
             {/* Spotify Playlists */}
             <div className="grid grid-cols-5 gap-8 mt-5 px-8">
-              <Card />
-              <Card />
-              <Card />
-              <Card />
-              <Card />
-            </div>
-          </div>
-          <div className="pt-8 bg-secondary">
-            <div className="flex justify-between items-center px-4">
-              <h2 className="text-xl font-bold opacity-80">
-                Great first audiobooks
-              </h2>
-              <Link className="opacity-80">Show all</Link>
-            </div>
-
-            <div className="grid grid-cols-5 gap-8 mt-5 px-8">
-              <Card />
-              <Card />
-              <Card />
-              <Card />
-              <Card />
-            </div>
-          </div>
-          <div className="pt-8 bg-secondary">
-            <div className="flex justify-between items-center px-4">
-              <h2 className="text-xl font-bold opacity-80">
-                Great first audiobooks
-              </h2>
-              <Link className="opacity-80">Show all</Link>
-            </div>
-
-            <div className="grid grid-cols-5 gap-8 mt-5 px-8">
-              <Card />
-              <Card />
-              <Card />
-              <Card />
-              <Card />
+              {songs.map((song) => (
+                <Card song={song} key={song.id} />
+              ))}
             </div>
           </div>
         </div>
